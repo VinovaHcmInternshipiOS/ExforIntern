@@ -28,18 +28,38 @@ class ViewController: UIViewController {
     {
         print(sender.tag)
         let cell = tableView.cellForRow(at: IndexPath.init(row: sender.tag, section: 0)) as! StackTableViewCell
-        if(cell.lbContent.isHidden == true)
+        if(dataTable.data[sender.tag].stateCell == false)
         {
+            cell.btAction.setTitle("Thu nhỏ", for: .normal)
             UIView.animate(withDuration: 0.1) {
-                cell.lbContent.isHidden = false
-                cell.btAction.setTitle("Thu nhỏ", for: .normal)
+                cell.lbContent.isHidden = true
+                 self.dataTable.data[sender.tag].stateCell = true
+                if(self.dataTable.data[sender.tag].stateCell == false)
+                {
+                    cell.btAction.setTitle("Thu nhỏ", for: .normal)
+                }
+                else
+                {
+                    cell.btAction.setTitle("Mở rộng", for: .normal)
+                }
+                
             }
         }
         else
         {
+            cell.btAction.setTitle("Xem thêm", for: .normal)
             UIView.animate(withDuration: 0.1) {
-                cell.lbContent.isHidden = true
-                cell.btAction.setTitle("Xem thêm", for: .normal)
+                cell.lbContent.isHidden = false
+                self.dataTable.data[sender.tag].stateCell = false
+                if(self.dataTable.data[sender.tag].stateCell == false)
+                {
+                    cell.btAction.setTitle("Thu nhỏ", for: .normal)
+                }
+                else
+                {
+                    cell.btAction.setTitle("Mở rộng", for: .normal)
+                }
+                
             }
         }
         
@@ -78,16 +98,18 @@ extension ViewController: UITableViewDataSource {
         cell.newImage.image = UIImage(named: "\(dataTable.data[indexPath.row].imgView)")
         cell.lbTitle.text = dataTable.data[indexPath.row].title
         cell.lbContent.text = dataTable.data[indexPath.row].content
+        cell.lbContent.isHidden = dataTable.data[indexPath.row].stateCell
         cell.btAction.tag = indexPath.row
         cell.btAction.addTarget(self, action: #selector(actionButton), for: .touchUpInside)
-        if(cell.lbContent.isHidden == true)
+        if(dataTable.data[indexPath.row].stateCell == false)
         {
-            
-            cell.btAction.setTitle("Xem thêm", for: .normal)
+            cell.btAction.setTitle("Thu nhỏ", for: .normal)
+            cell.lbContent.isHidden = false
         }
         else
         {
-            cell.btAction.setTitle("Thu nhỏ", for: .normal)
+            cell.btAction.setTitle("Xem thêm", for: .normal)
+            cell.lbContent.isHidden = true
         }
         
         return cell
