@@ -37,7 +37,16 @@ extension TableViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        if(section == 0)
+        {
+            return 0
+        }
+        
+        else
+        {
+            return 50
+        }
+       
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -52,8 +61,8 @@ extension TableViewController: UITableViewDataSource{
         {
             let label = UILabel()
             let headerView = UIView()
-            headerView.layer.cornerRadius = 15
-            label.font = UIFont.systemFont(ofSize: 15)
+            headerView.layer.cornerRadius = 10
+            label.font = UIFont.boldSystemFont(ofSize: 15)
             label.text = "MOVIE SELECTION"
             label.textColor = .white
             headerView.backgroundColor = .red
@@ -71,20 +80,17 @@ extension TableViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if(indexPath.section == 0)
-        {
+        if indexPath.section == 0 {
             guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell", for: indexPath) as? BannerTableViewCell else {return UITableViewCell()}
             return cell1
-        }
-        else
-        {
+        } else {
             guard let cell2 = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else {return UITableViewCell()}
             cell2.setData(arrayPostion[indexPath.section])
             cell2.updatePosition()
             cell2.scrollCell = {
                 self.arrayPostion[indexPath.section] = cell2.index
             }
+            cell2.collectionView.reloadData()
             return cell2
         }
     }
@@ -92,7 +98,7 @@ extension TableViewController: UITableViewDataSource{
 
 extension TableViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return tableView.frame.width / 1.5
     }
 }
 

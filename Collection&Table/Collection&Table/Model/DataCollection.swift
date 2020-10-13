@@ -9,14 +9,12 @@
 import Foundation
 struct DataCell {
     var imageView = String()
-    var position = Int()
-    init(imageView: String,position: Int)
+    init(imageView: String)
     {
         self.imageView = imageView
-        self.position = position
     }
 }
 struct DataMovie {
     static var share = DataMovie()
-    var data: [DataCell] = [DataCell(imageView: "img1.jpeg",position: 0),DataCell(imageView: "img2.jpeg",position: 0),DataCell(imageView: "img3.jpeg",position: 0),DataCell(imageView: "img4.jpeg",position: 0),DataCell(imageView: "img5.jpeg",position: 0),DataCell(imageView: "img6.jpeg",position: 0),DataCell(imageView: "img7.jpeg",position: 0),DataCell(imageView: "img8.jpeg",position: 0),DataCell(imageView: "img9.jpeg",position: 0),DataCell(imageView: "img10.jpeg",position: 0),DataCell(imageView: "img11.jpeg",position: 0),DataCell(imageView: "img12.jpeg",position: 0),DataCell(imageView: "img13.jpeg",position: 0)]
+    var data: [DataCell] = [DataCell(imageView: "img1.jpeg"),DataCell(imageView: "img2.jpeg"),DataCell(imageView: "img3.jpeg"),DataCell(imageView: "img4.jpeg"),DataCell(imageView: "img5.jpeg"),DataCell(imageView: "img6.jpeg"),DataCell(imageView: "img7.jpeg"),DataCell(imageView: "img8.jpeg"),DataCell(imageView: "img9.jpeg"),DataCell(imageView: "img10.jpeg"),DataCell(imageView: "img11.jpeg"),DataCell(imageView: "img12.jpeg"),DataCell(imageView: "img13.jpeg")]
 }
