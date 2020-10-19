@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataSearchViewController" customModule="MVPCallAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="btSearch" destination="egW-V9-srQ" id="pa1-yj-h7a"/>
+                <outlet property="lbResult" destination="avc-7N-EXG" id="ReS-Uf-axe"/>
+                <outlet property="tableView" destination="GtY-7o-g3m" id="hbv-jQ-v6T"/>
+                <outlet property="txtSearch" destination="LzE-cu-dDC" id="jWD-iq-KAi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LzE-cu-dDC">
+                    <rect key="frame" x="20" y="54" width="296" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egW-V9-srQ">
+                    <rect key="frame" x="326" y="54" width="68" height="38"/>
+                    <color key="backgroundColor" red="0.94022601839999997" green="0.63772737980000005" blue="0.23121365899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btSearch:" destination="-1" eventType="touchUpInside" id="UKW-n9-S1m"/>
+                    </connections>
+                </button>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GtY-7o-g3m">
+                    <rect key="frame" x="0.0" y="102" width="414" height="760"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="no result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avc-7N-EXG">
+                    <rect key="frame" x="20" y="102" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95585900550000003" green="0.95553034540000004" blue="0.97369307279999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LzE-cu-dDC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="09A-lU-yzO"/>
+                <constraint firstItem="avc-7N-EXG" firstAttribute="top" secondItem="LzE-cu-dDC" secondAttribute="bottom" constant="10" id="9wo-2t-NJ9"/>
+                <constraint firstItem="egW-V9-srQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="D0o-Fm-GSs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="avc-7N-EXG" secondAttribute="trailing" constant="20" id="HeJ-wH-bB9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="egW-V9-srQ" secondAttribute="trailing" constant="20" id="HkM-5Q-BVt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GtY-7o-g3m" secondAttribute="trailing" id="Jgf-Xj-gtr"/>
+                <constraint firstItem="GtY-7o-g3m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WTa-BK-H2W"/>
+                <constraint firstItem="egW-V9-srQ" firstAttribute="leading" secondItem="LzE-cu-dDC" secondAttribute="trailing" constant="10" id="aqX-8R-NXi"/>
+                <constraint firstItem="GtY-7o-g3m" firstAttribute="top" secondItem="LzE-cu-dDC" secondAttribute="bottom" constant="10" id="dZr-bQ-Vc5"/>
+                <constraint firstItem="GtY-7o-g3m" firstAttribute="top" secondItem="egW-V9-srQ" secondAttribute="bottom" constant="10" id="i93-Dt-OU3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GtY-7o-g3m" secondAttribute="bottom" id="o2H-Dk-ObP"/>
+                <constraint firstItem="LzE-cu-dDC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="r8y-f1-nfT"/>
+                <constraint firstItem="avc-7N-EXG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="s6F-xL-Vod"/>
+            </constraints>
+            <point key="canvasLocation" x="31.884057971014496" y="27.455357142857142"/>
+        </view>
+    </objects>
+</document>
