@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="20A5395g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Credits" representedClassName="Credits" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="numberCredit" optional="YES" attributeType="String"/>
+        <relationship name="relaCredit" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="relaUser" inverseEntity="Users"/>
+    </entity>
+    <entity name="Users" representedClassName="Users" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="relaUser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Credits" inverseName="relaCredit" inverseEntity="Credits"/>
+    </entity>
+    <elements>
+        <element name="Credits" positionX="-6570" positionY="-5247" width="128" height="74"/>
+        <element name="Users" positionX="-6575.774719238281" positionY="-5268.302062988281" width="147.5849609375" height="74"/>
+    </elements>
+</model>

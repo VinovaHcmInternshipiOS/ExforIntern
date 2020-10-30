@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListUserViewController" customModule="CoreDataExample" customModuleProvider="target">
+            <connections>
+                <outlet property="stateTable" destination="DZT-Pr-NYx" id="WFb-dz-4EP"/>
+                <outlet property="tableView" destination="Y2A-bR-vnh" id="3Ep-aX-tpg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-bR-vnh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not available user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZT-Pr-NYx">
+                    <rect key="frame" x="121" y="323" width="133" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DZT-Pr-NYx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3BC-hc-L9R"/>
+                <constraint firstAttribute="bottom" secondItem="Y2A-bR-vnh" secondAttribute="bottom" id="4yJ-HK-h0M"/>
+                <constraint firstItem="Y2A-bR-vnh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XJn-A9-hhz"/>
+                <constraint firstItem="Y2A-bR-vnh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bvp-1P-7B4"/>
+                <constraint firstAttribute="trailing" secondItem="Y2A-bR-vnh" secondAttribute="trailing" id="hQc-eI-nfH"/>
+                <constraint firstItem="DZT-Pr-NYx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sSN-dh-ll5"/>
+            </constraints>
+            <point key="canvasLocation" x="124" y="132"/>
+        </view>
+    </objects>
+</document>

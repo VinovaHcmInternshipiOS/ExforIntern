@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateUserViewController" customModule="CoreDataExample" customModuleProvider="target">
+            <connections>
+                <outlet property="btCreate" destination="m4a-NP-jgE" id="Iew-Nw-E30"/>
+                <outlet property="txtName" destination="v4P-EW-BIM" id="jpc-nv-P9k"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYO-eH-046">
+                    <rect key="frame" x="50" y="70" width="275" height="527"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ug-wh-aOu">
+                            <rect key="frame" x="0.0" y="100" width="40.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-EW-BIM">
+                            <rect key="frame" x="0.0" y="123" width="275" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4a-NP-jgE">
+                            <rect key="frame" x="100" y="177" width="75" height="34"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btCreate:" destination="-1" eventType="touchUpInside" id="mC2-xR-Xq1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="m4a-NP-jgE" secondAttribute="trailing" constant="100" id="AdK-2b-ojI"/>
+                        <constraint firstItem="v4P-EW-BIM" firstAttribute="leading" secondItem="xYO-eH-046" secondAttribute="leading" id="Gxm-Q4-dpu"/>
+                        <constraint firstItem="v4P-EW-BIM" firstAttribute="top" secondItem="3Ug-wh-aOu" secondAttribute="bottom" constant="5" id="IQN-Md-qqg"/>
+                        <constraint firstItem="m4a-NP-jgE" firstAttribute="leading" secondItem="xYO-eH-046" secondAttribute="leading" constant="100" id="Ods-Rv-5kw"/>
+                        <constraint firstItem="3Ug-wh-aOu" firstAttribute="leading" secondItem="xYO-eH-046" secondAttribute="leading" id="eNL-u7-DaQ"/>
+                        <constraint firstItem="3Ug-wh-aOu" firstAttribute="top" secondItem="xYO-eH-046" secondAttribute="top" constant="100" id="eQl-ax-EH4"/>
+                        <constraint firstAttribute="trailing" secondItem="v4P-EW-BIM" secondAttribute="trailing" id="gnW-Yy-HES"/>
+                        <constraint firstItem="m4a-NP-jgE" firstAttribute="top" secondItem="v4P-EW-BIM" secondAttribute="bottom" constant="20" id="ofl-Vh-fdM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xYO-eH-046" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Cfg-YS-PTz"/>
+                <constraint firstAttribute="trailing" secondItem="xYO-eH-046" secondAttribute="trailing" constant="50" id="eti-Rp-REC"/>
+                <constraint firstItem="xYO-eH-046" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="oSa-Za-cvK"/>
+                <constraint firstAttribute="bottom" secondItem="xYO-eH-046" secondAttribute="bottom" constant="70" id="uL9-vl-RWu"/>
+            </constraints>
+            <point key="canvasLocation" x="-55.200000000000003" y="143.47826086956522"/>
+        </view>
+        <view contentMode="scaleToFill" id="eS7-Ak-3qZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gH2-cL-ovv">
+                    <rect key="frame" x="102" y="175" width="170" height="206"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eA-Ex-4lL">
+                            <rect key="frame" x="-18" y="0.0" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="-34.399999999999999" y="840.62968515742136"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
